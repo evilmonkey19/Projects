@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>util.ContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ComplexServlet</servlet-name>
+        <servlet-class>web.ComplexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ComputeServlet</servlet-name>
+        <servlet-class>web.ComputeServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ComplexDDBBCServlet</servlet-name>
+        <servlet-class>web.ComplexDDBBServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ComplexServlet</servlet-name>
+        <url-pattern>/complex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComputeServlet</servlet-name>
+        <url-pattern>/compute</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ComplexDDBBCServlet</servlet-name>
+        <url-pattern>/complexddbb</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            1
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>indexForm.html</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
